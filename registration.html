@@ -2,109 +2,183 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <title>Registration</title>
 </head>
 <body>
     <hr>
-    <table border="1" align="center" cellspacing="3" cellpadding="6">
-        <tr>
-            <td > <a href="home.html" target="_self"> Home </a> </td>
-            <td> <a href="localdishes.html" target="_self">Local Dishes</a> </td>
-            <td> <a href="historicalplaces.html" target="_self">Historical Places </a> </td>
-            <td> <a href="usefullinks.html" target="_self">Useful Links</a> </td>
-            <td> <a href="aboutme.html" target="_self">About Me</a> </td>
-            <td> <a href="contactme.html" target="_self"> Contact Me</a> </td>
-            <td> <a href="registration.html" target="_self"><font size="6">Registration</font> </a> </td>
-        </tr>
-    </table>
-    <br>
+    <div class="container">
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand text-secondary" href="home.html" target="_self">Home</a>
+            <a class="navbar-brand text-secondary" href="localdishes.html" target="_self">Local Dishes</a>
+            <a class="navbar-brand text-secondary" href="historicalplaces.html" target="_self">Historical Places</a>
+            <a class="navbar-brand text-secondary" href="usefullinks.html" target="_self">Useful Links</a>
+            <a class="navbar-brand text-secondary" href="aboutme.html" target="_self">About Me</a>
+            <a class="navbar-brand text-secondary" href="contactme.html" target="_self">Contact Me</a>
+            <a class="navbar-brand nav-link active" href="registration.html" target="_self">Registration</a>
+        </nav>
+        <br>
 
-    <div align="center" >
-        <form action="thanks.html">
+
+
+        <div class="border border-light rounded" align="center" >
+            <br>
+            <form action="thanks.html">
             <table>
                 <tr>
-                    <td>First Name:</td>
+                    <td>Name:</td>
                     <td>
-                        <input type="text" name="name">
+                        <div class="col-13">
+                            <input class="form-control" type="text" id="name" placeholder="Henry">
+                        </div>
                     </td>
                 </tr>
                 <tr>
-                    <td>Surname:</td>
+                    <td class="">Surname:</td>
                     <td>
-                        <input type="text" name="surname">
+                        <div class="col-13">
+                            <input class="form-control" type="text" id="surname" placeholder="David">
+                        </div>
                     </td>
                 </tr>
                 <tr>
                     <td>Date of Birth:</td>
                     <td>
-                        <input type="date" name="dob">
+                        <div class="col-13">
+                            <input class="form-control" type="date" id="dob" value="2018-01-01">
+                        </div>
                     </td>
                 </tr>
                 <tr>
-                    <td>E-mail:</td>
-                    <td>
-                        <input type="email" name="email">
+                    <td>Email:</td>
+                    <td class="form-group">
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
                     </td>
                 </tr>
                 <tr>
                     <td>Password:</td>
-                    <td>
-                        <input type="password" name="password">
+                    <td class="form-group mx-sm-3 mb-2">
+                        <input type="password" class="form-control" id="password" placeholder="Password">
                     </td>
                 </tr>
                 <tr>
                     <td>Gender:</td>
                     <td>
-                        <select>
-                            <option value="female">Female</option>
-                            <option value="male">Male</option>
-                            <option value="notspe">Prefer Not to Answer</option>
-                        </select>
+                        <div class="form-group">
+                            <select class="form-control" id="gender">
+                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+                                <option value="notspe">Prefer Not to Answer</option>
+                            </select>
+                        </div>
                     </td>
                 </tr>
                 <tr>
-                    <td rowspan="7">Interests:</td>
+                    <td rowspan="8">Interests:</td>
                 </tr>
-                <tr>
-                    <td><input type="checkbox" name="interests" value="photography">Photography</td>
-                    <td><input type="checkbox" name="interests" value="origami">Origami</td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="interests" value="painting">Painting </td>
-                    <td><input type="checkbox" name="interests" value="cooking">Cooking </td>
-                </tr>
-                <tr>
-                    <td><input type="checkbox" name="interests" value="backgammon">Backgammon </td>
-                    <td><input type="checkbox" name="interests" value="astronomy">Amateur astronomy</td>
-                </tr>
-
-                <tr>
-                    <td><input type="checkbox" name="interests" value="cycling">Cycling </td>
-                    <td><input type="checkbox" name="interests" value="pottery">Pottery </td>
-                </tr>
-
-                <tr>
-                    <td><input type="checkbox" name="interests" value="robotics">Robotics</td>
-                    <td><input type="checkbox" name="interests" value="skydiving">Skydiving</td>
-                </tr>
-
-                <tr>
-                    <td><input type="checkbox" name="interests" value="yoga">Yoga</td>
-                    <td><input type="checkbox" name="interests" value="squash">Squash</td>
-                </tr>
-
-                <tr align="center">
+                <tr >
                     <td>
-                        <input type="submit" value="Submit">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="Photography">
+                            <label class="custom-control-label" for="Photography">Photography</label>
+                        </div>
                     </td>
                     <td>
-                        <input type="reset">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="Origami">
+                            <label class="custom-control-label" for="Origami">Origami</label>
+                        </div>
+                    </td>
+                </tr>
+                <tr >
+                    <td>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="Painting">
+                            <label class="custom-control-label" for="Painting">Painting</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="Cooking">
+                            <label class="custom-control-label" for="Cooking">Cooking</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr >
+                    <td>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="Backgammon">
+                            <label class="custom-control-label" for="Backgammon">Backgammon</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="Amateur Astronomy">
+                            <label class="custom-control-label" for="Amateur Astronomy">Amateur Astronomy</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr >
+                    <td>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="Cycling">
+                            <label class="custom-control-label" for="Cycling">Cycling</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="Pottery">
+                            <label class="custom-control-label" for="Pottery">Pottery</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr >
+                    <td>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="Robotics">
+                            <label class="custom-control-label" for="Robotics">Robotics</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="Skydiving">
+                            <label class="custom-control-label" for="Skydiving">Skydiving</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr >
+                    <td>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="Yoga">
+                            <label class="custom-control-label" for="Yoga">Yoga</label>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="Squash">
+                            <label class="custom-control-label" for="Squash">Squash</label>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input class="btn btn-dark" type="submit" value="Submit">
+                    </td>
+                    <td>
+                        <input class="btn btn-danger" type="reset">
                     </td>
                 </tr>
             </table>
         </form>
+            <br>
+        </div>
     </div>
-
 
 </body>
 </html>
